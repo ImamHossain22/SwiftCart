@@ -32,8 +32,13 @@
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li><a>Products</a></li>
+                        <li>
+                            <a href="#" id="homeBtn">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" id="productsBtn">Products</a>
+                        </li>
+
                         <li><a>About</a></li>
                         <li><a>Contact</a></li>
                     </ul>
@@ -61,105 +66,139 @@
                 </div>
             </div>
         </nav>
-        <section>
+    </header>
 
-            <div class="relative h-[60vh]">
+    <main>
+        <!-- homeSection -->
 
-                <div class="absolute inset-0 bg-cover bg-center bg-[url('./Assets/banner-image.png')]">
+        <section id="homeSection">
+            <!-- banner -->
+            <div>
 
-                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 to-white/30">
+                <div class="relative h-[60vh]">
 
-                        <div class="relative z-10 flex items-center  h-full text-white">
-                            <div class="w-9/12 mx-auto">
-                                <h1 class=" text-2xl lg:text-5xl font-bold">Best Collection For You</h1>
-                                <p class="md:w-96 py-6">
-                                    Discover the latest trends in fashion, electronics, and more.
-                                    Shop with confidence and style at SwiftCart.
-                                </p>
-                                <button class="btn btn-primary">Get Started</button>
+                    <div class="absolute inset-0 bg-cover bg-center bg-[url('./Assets/banner-image.png')]">
+
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/90 to-white/30">
+
+                            <div class="relative z-10 flex items-center  h-full text-white">
+                                <div class="w-9/12 mx-auto">
+                                    <h1 class=" text-2xl lg:text-5xl font-bold">Best Collection For You</h1>
+                                    <p class="md:w-96 py-6">
+                                        Discover the latest trends in fashion, electronics, and more.
+                                        Shop with confidence and style at SwiftCart.
+                                    </p>
+                                    <button class="btn btn-primary">Get Started</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </header>
-    <main>
-        <section class="py-20 bg-base-100 shadow-sm text-center">
-            <h2 class="text-3xl font-bold mb-3">Why Choose Us</h2>
-            <p class="text-gray-500 mb-12">
-                We provide the best shopping experience with top-notch services.
-            </p>
-
-            <div class="w-9/12 mx-auto grid md:grid-cols-4 gap-8">
-
-                <div class="card  shadow-sm">
-                    <div class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
-                        <i class=" text-blue-600 fa-regular fa-truck"></i>
-                    </div>
-                    <div class="card-body text-start">
-
-                        <h2 class="card-title">Fast Delivery</h2>
-                        <p> Get your orders delivered quickly and efficiently.
-                        </p>
-
-
-                    </div>
-                </div>
-                <div class="card  shadow-sm">
-                    <div class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
-                        <i class=" text-blue-600 fa-regular fa-headphones"></i>
-                    </div>
-                    <div class="card-body text-start">
-
-                        <h2 class="card-title">24/7 Support</h2>
-                        <p> Our support team is available around the clock.
-                        </p>
-
-
-                    </div>
-                </div>
-                <div class="card  shadow-sm">
-                    <div class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
-                        <i class=" text-blue-600 fa-solid fa-shield-halved"></i>
-                    </div>
-                    <div class="card-body text-start">
-
-                        <h2 class="card-title">Secure Payment</h2>
-                        <p> Safe and encrypted transactions guaranteed.
-
-                        </p>
-
-
-                    </div>
-                </div>
-                <div class="card  shadow-sm">
-                    <div class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
-                        <i class="fa-solid text-blue-600 fa-arrows-rotate"></i>
-                    </div>
-                    <div class="card-body text-start">
-
-                        <h2 class="card-title">Easy Returns</h2>
-                        <p> assle-free returns within 30 days.
-                        </p>
-
 
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <div class="w-9/12 mx-auto bg-base-100">
-                <h1 class="font-bold text-2xl my-2">Trending Now</h1>
+
+            <!-- why chose us -->
+
+            <div class="py-20 bg-base-100 shadow-sm text-center">
+                <h2 class="text-3xl font-bold mb-3">Why Choose Us</h2>
+                <p class="text-gray-500 mb-12">
+                    We provide the best shopping experience with top-notch services.
+                </p>
+
+                <div class="w-9/12 mx-auto grid md:grid-cols-4 gap-8">
+
+                    <div class="card  shadow-sm">
+                        <div
+                            class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
+                            <i class=" text-blue-600 fa-regular fa-truck"></i>
+                        </div>
+                        <div class="card-body text-start">
+
+                            <h2 class="card-title">Fast Delivery</h2>
+                            <p> Get your orders delivered quickly and efficiently.
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="card  shadow-sm">
+                        <div
+                            class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
+                            <i class=" text-blue-600 fa-regular fa-headphones"></i>
+                        </div>
+                        <div class="card-body text-start">
+
+                            <h2 class="card-title">24/7 Support</h2>
+                            <p> Our support team is available around the clock.
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="card  shadow-sm">
+                        <div
+                            class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
+                            <i class=" text-blue-600 fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="card-body text-start">
+
+                            <h2 class="card-title">Secure Payment</h2>
+                            <p> Safe and encrypted transactions guaranteed.
+
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="card  shadow-sm">
+                        <div
+                            class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
+                            <i class="fa-solid text-blue-600 fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-body text-start">
+
+                            <h2 class="card-title">Easy Returns</h2>
+                            <p> assle-free returns within 30 days.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- trending div -->
+
+            <div>
+                <div class="w-9/12 mx-auto bg-base-100">
+                    <h1 class="font-bold text-2xl my-2">Trending Now</h1>
+                </div>
             </div>
         </section>
+
+        <!-- Products Section -->
+        <section id="productsSection" class="hidden p-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Our Products</h2>
+
+            <!-- Categories -->
+            <div id="categoryContainer" class="flex flex-wrap justify-center gap-4 mb-8"></div>
+
+            <!-- Products Grid -->
+            <div id="productContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            </div>
+        </section>
+
+        <!-- Single Product Section -->
+        <section id="singleProductSection" class="hidden p-8">
+            
+        </section>
+
+
     </main>
 
-    <section class="bg-accent-content">
+    <footer class="bg-accent-content">
 
-        <footer class="footer flex justify-between w-9/12 mx-auto p-10  text-neutral-content">
+        <section class="footer md:flex md:justify-between w-9/12 mx-auto p-10  text-neutral-content">
             <aside>
                 <h2 class="text-2xl font-bold">SwiftCart</h2>
                 <p>Your one-stop shop for fashion and lifestyle.</p>
@@ -190,9 +229,13 @@
                     </button>
                 </div>
             </form>
-        </footer>
-    </section>
+        </section>
+    </footer>
 
+
+    <!-- Script -->
+
+    <script src="./main.js"></script>
 </body>
 
 </html>
