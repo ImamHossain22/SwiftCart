@@ -1,3 +1,10 @@
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const updateCartCount = () => {
+  document.getElementById("cartCount").innerText = cart.length;
+};
+
+updateCartCount();
+
 const homeSection = document.getElementById("homeSection");
 const productsSection = document.getElementById("productsSection");
 const singleProductSection = document.getElementById("singleProductSection");
@@ -75,7 +82,7 @@ function displayProducts(products) {
          <i class="fa-solid fa-eye"></i> Details
         </button>
 
-        <button onclick="loadSingleProduct()"
+        <button  onclick="addToCart(${product.id})"
           class="bg-blue-700 text-white px-4 py-2 rounded-xl ">
           <i class="fa-solid fa-cart-plus"></i> Add
         </button>
@@ -84,6 +91,20 @@ function displayProducts(products) {
     `;
   });
 }
+// cart function
+
+const addToCart = async (id) => {
+  const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const product = await res.json();
+
+  cart.push(product);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCartCount();
+
+  alert("Product added to cart ✅");
+};
 
 // ================= LOAD CATEGORIES =================
 async function loadCategories() {

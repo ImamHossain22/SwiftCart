@@ -30,7 +30,7 @@ async function openProductModal(id) {
         </p>
 
         <div class="flex gap-3">
-          <button class="btn btn-primary">
+          <button onclick="addToCart(${product.id})" class="btn btn-primary">
             Add to Cart
           </button>
 

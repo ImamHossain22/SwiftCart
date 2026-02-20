@@ -39,7 +39,7 @@ async function loadTrendingProducts() {
          <i class="fa-solid fa-eye"></i> Details
         </button>
 
-        <button onclick="loadSingleProduct()"
+        <button onclick="addToCart(${product.id})"
           class="bg-blue-700 text-white px-4 py-2 rounded-xl ">
           <i class="fa-solid fa-cart-plus"></i> Add
         </button>
