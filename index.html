@@ -24,8 +24,8 @@
 
 <body>
     <header>
-        <nav>
-            <div class="navbar bg-base-100 shadow-sm">
+        <nav class="w-9/12 mx-auto">
+            <div class="navbar bg-base-100">
                 <div class="navbar-start">
 
                     <a class="btn btn-ghost text-xl text-blue-700">SwiftCart</a>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="navbar-end">
 
-                  <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
                     <div class="dropdown dropdown-left">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -61,7 +61,138 @@
                 </div>
             </div>
         </nav>
+        <section>
+
+            <div class="relative h-[60vh]">
+
+                <div class="absolute inset-0 bg-cover bg-center bg-[url('./Assets/banner-image.png')]">
+
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 to-white/30">
+
+                        <div class="relative z-10 flex items-center  h-full text-white">
+                            <div class="w-9/12 mx-auto">
+                                <h1 class=" text-2xl lg:text-5xl font-bold">Best Collection For You</h1>
+                                <p class="md:w-96 py-6">
+                                    Discover the latest trends in fashion, electronics, and more.
+                                    Shop with confidence and style at SwiftCart.
+                                </p>
+                                <button class="btn btn-primary">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </header>
+    <main>
+        <section class="py-20 bg-base-100 shadow-sm text-center">
+            <h2 class="text-3xl font-bold mb-3">Why Choose Us</h2>
+            <p class="text-gray-500 mb-12">
+                We provide the best shopping experience with top-notch services.
+            </p>
+
+            <div class="w-9/12 mx-auto grid md:grid-cols-4 gap-8">
+
+                <div class="card  shadow-sm">
+                    <div class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
+                        <i class=" text-blue-600 fa-regular fa-truck"></i>
+                    </div>
+                    <div class="card-body text-start">
+
+                        <h2 class="card-title">Fast Delivery</h2>
+                        <p> Get your orders delivered quickly and efficiently.
+                        </p>
+
+
+                    </div>
+                </div>
+                <div class="card  shadow-sm">
+                    <div class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
+                        <i class=" text-blue-600 fa-regular fa-headphones"></i>
+                    </div>
+                    <div class="card-body text-start">
+
+                        <h2 class="card-title">24/7 Support</h2>
+                        <p> Our support team is available around the clock.
+                        </p>
+
+
+                    </div>
+                </div>
+                <div class="card  shadow-sm">
+                    <div class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
+                        <i class=" text-blue-600 fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="card-body text-start">
+
+                        <h2 class="card-title">Secure Payment</h2>
+                        <p> Safe and encrypted transactions guaranteed.
+
+                        </p>
+
+
+                    </div>
+                </div>
+                <div class="card  shadow-sm">
+                    <div class="flex bg-sky-100 w-10 h-10 -mt-5 items-center justify-center  shadow-sm ml-3 rounded ">
+                        <i class="fa-solid text-blue-600 fa-arrows-rotate"></i>
+                    </div>
+                    <div class="card-body text-start">
+
+                        <h2 class="card-title">Easy Returns</h2>
+                        <p> assle-free returns within 30 days.
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="w-9/12 mx-auto bg-base-100">
+                <h1 class="font-bold text-2xl my-2">Trending Now</h1>
+            </div>
+        </section>
+    </main>
+
+    <section class="bg-accent-content">
+
+        <footer class="footer flex justify-between w-9/12 mx-auto p-10  text-neutral-content">
+            <aside>
+                <h2 class="text-2xl font-bold">SwiftCart</h2>
+                <p>Your one-stop shop for fashion and lifestyle.</p>
+            </aside>
+
+            <nav>
+                <h6 class="footer-title">Quick Links</h6>
+                <a class="link link-hover">Home</a>
+                <a class="link link-hover">Products</a>
+                <a class="link link-hover">About</a>
+                <a class="link link-hover">Contact</a>
+            </nav>
+
+            <nav>
+                <h6 class="footer-title">Support</h6>
+                <a class="link link-hover">FAQ</a>
+                <a class="link link-hover">Shipping</a>
+                <a class="link link-hover">Returns</a>
+                <a class="link link-hover">Privacy Policy</a>
+            </nav>
+
+            <form>
+                <h6 class="footer-title">Newsletter</h6>
+                <div class="join">
+                    <input class="input input-bordered join-item" placeholder="Enter email" />
+                    <button class="btn bg-blue-600 text-white join-item">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </footer>
+    </section>
+
 </body>
 
 </html>
