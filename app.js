@@ -11,10 +11,10 @@ const productsBtn = document.getElementById("productsBtn");
 const setActiveNav = (activeBtn) => {
   [homeBtn, productsBtn].forEach((btn) => {
     btn.classList.remove("text-blue-700", "font-semibold");
-    btn.classList.add("text-gray-400");
+    btn.classList.add("text-black");
   });
 
-  activeBtn.classList.remove("text-gray-400");
+  activeBtn.classList.remove("text-black");
   activeBtn.classList.add("text-blue-700", "font-semibold");
 };
 
