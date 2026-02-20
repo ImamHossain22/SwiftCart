@@ -30,13 +30,14 @@
 
                     <a class="btn btn-ghost text-xl text-blue-700">SwiftCart</a>
                 </div>
+
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
                         <li>
-                            <a href="#" id="homeBtn">Home</a>
+                            <a id="homeBtn" class="font-medium text-gray-400">Home</a>
                         </li>
                         <li>
-                            <a href="#" id="productsBtn">Products</a>
+                            <a id="productsBtn" class="font-medium text-gray-400">Products</a>
                         </li>
 
                         <li><a>About</a></li>
@@ -57,8 +58,13 @@
                         </div>
                         <ul tabindex="-1"
                             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-14 -mr-14 w-52 p-2 shadow">
-                            <li><a>Home</a></li>
-                            <li><a>Products</a></li>
+                            <li>
+                                <a id="homeBtn" class="font-medium text-gray-400">Home</a>
+                            </li>
+                            <li>
+                                <a  id="productsBtn" class="font-medium text-gray-400">Products</a>
+                            </li>
+
                             <li><a>About</a></li>
                             <li><a>Contact</a></li>
                         </ul>
@@ -172,9 +178,15 @@
             <div>
                 <div class="w-9/12 mx-auto bg-base-100">
                     <h1 class="font-bold text-2xl my-2">Trending Now</h1>
+
+                    <div id="trendingContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    </div>
+
                 </div>
             </div>
         </section>
+
+
 
         <!-- Products Section -->
         <section id="productsSection" class="hidden p-8">
@@ -190,7 +202,7 @@
 
         <!-- Single Product Section -->
         <section id="singleProductSection" class="hidden p-8">
-            
+
         </section>
 
 
@@ -235,6 +247,7 @@
 
     <!-- Script -->
 
+    <script src="./app.js"></script>
     <script src="./main.js"></script>
 </body>
 
