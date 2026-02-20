@@ -32,10 +32,18 @@ async function loadTrendingProducts() {
 
         <p class="text-lg font-bold my-2">$${product.price}</p>
 
-        <button onclick="loadSingleProduct(${product.id})"
-          class="bg-blue-700 text-white px-4 py-2 rounded w-full">
-          View Details
+        <div class= "flex justify-between">
+        
+        <button onclick="openProductModal(${product.id})"
+          class=" px-4 py-2 border rounded-xl">
+         <i class="fa-solid fa-eye"></i> Details
         </button>
+
+        <button onclick="loadSingleProduct()"
+          class="bg-blue-700 text-white px-4 py-2 rounded-xl ">
+          <i class="fa-solid fa-cart-plus"></i> Add
+        </button>
+    </div>  
       </div>
     `;
   });
