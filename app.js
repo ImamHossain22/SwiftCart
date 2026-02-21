@@ -106,7 +106,8 @@ const addToCart = async (id) => {
   alert("Product added to cart ✅");
 };
 
-// ================= LOAD CATEGORIES =================
+// LOAD CATEGORIES 
+
 async function loadCategories() {
   const res = await fetch("https://fakestoreapi.com/products/categories");
   const categories = await res.json();
@@ -117,10 +118,10 @@ async function loadCategories() {
       All
     </button>
   `;
-
+  
   categories.forEach((cat) => {
     categoryContainer.innerHTML += `
-      <button onclick="setCategoryActive(this); loadByCategory('${cat}')"
+      <button  onclick="loadByCategory(\`${cat}\`); setActiveCategory(this)"
         class="categoryBtn px-4 py-2 bg-gray-200 rounded hover:bg-blue-600 hover:text-white">
         ${cat}
       </button>
@@ -142,10 +143,11 @@ function setCategoryActive(clickedBtn) {
 // ================= FILTER CATEGORY =================
 async function loadByCategory(category) {
   const res = await fetch(
-    `https://fakestoreapi.com/products/category/${category}`,
+   `https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`,
   );
   const data = await res.json();
   displayProducts(data);
+  console.log(data);
 }
 
 // ================= SINGLE PRODUCT =================

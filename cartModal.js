@@ -38,7 +38,14 @@ const removeFromCart = (index) => {
 
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  const loadProducts = async () => {
+  
+
+  updateCartCount();
+
+  openCart(); // refresh cart view
+};
+
+const loadProducts = async () => {
     const loader = document.getElementById("loader");
     loader.classList.remove("hidden");
 
@@ -48,9 +55,5 @@ const removeFromCart = (index) => {
     loader.classList.add("hidden");
 
     displayProducts(data);
-  };
-
-  updateCartCount();
-
-  openCart(); // refresh cart view
 };
+  
