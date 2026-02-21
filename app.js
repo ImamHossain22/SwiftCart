@@ -10,6 +10,7 @@ const productsSection = document.getElementById("productsSection");
 const singleProductSection = document.getElementById("singleProductSection");
 
 const productContainer = document.getElementById("productContainer");
+
 const categoryContainer = document.getElementById("categoryContainer");
 
 const homeBtn = document.getElementById("homeBtn");
@@ -42,9 +43,11 @@ productsBtn.addEventListener("click", () => {
 
   loadProducts();
   loadCategories();
+  
 });
 
 async function loadProducts() {
+
   const res = await fetch("https://fakestoreapi.com/products");
   const data = await res.json();
   displayProducts(data);
@@ -90,6 +93,8 @@ function displayProducts(products) {
       </div>
     `;
   });
+
+  
 }
 // cart function
 
@@ -106,9 +111,17 @@ const addToCart = async (id) => {
   alert("Product added to cart ✅");
 };
 
-// LOAD CATEGORIES 
+// LOAD CATEGORIES
 
 async function loadCategories() {
+  //
+  const loader = document.getElementById("categoryLoader");
+
+  loader.classList.remove("hidden");
+  categoryContainer.innerHTML = "";
+
+  //
+
   const res = await fetch("https://fakestoreapi.com/products/categories");
   const categories = await res.json();
 
@@ -118,7 +131,7 @@ async function loadCategories() {
       All
     </button>
   `;
-  
+
   categories.forEach((cat) => {
     categoryContainer.innerHTML += `
       <button  onclick="loadByCategory(\`${cat}\`); setActiveCategory(this)"
@@ -127,6 +140,8 @@ async function loadCategories() {
       </button>
     `;
   });
+
+  loader.classList.add("hidden");
 }
 
 // ================= ACTIVE CATEGORY =================
@@ -143,11 +158,11 @@ function setCategoryActive(clickedBtn) {
 // ================= FILTER CATEGORY =================
 async function loadByCategory(category) {
   const res = await fetch(
-   `https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`,
+    `https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`,
   );
   const data = await res.json();
   displayProducts(data);
-  console.log(data);
+  
 }
 
 // ================= SINGLE PRODUCT =================
