@@ -133,10 +133,20 @@ async function loadCategories() {
   `;
 
   categories.forEach((cat) => {
+
+
+     const formattedName = cat
+      
+      .split(" ")
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
+      .join(" ");
+
+
+
     categoryContainer.innerHTML += `
       <button  onclick="loadByCategory(\`${cat}\`); setActiveCategory(this)"
         class="categoryBtn px-4 py-2 bg-gray-200 rounded hover:bg-blue-600 hover:text-white">
-        ${cat}
+         ${formattedName}
       </button>
     `;
   });
