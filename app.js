@@ -144,7 +144,7 @@ async function loadCategories() {
 
 
     categoryContainer.innerHTML += `
-      <button  onclick="loadByCategory(\`${cat}\`); setActiveCategory(this)"
+      <button  onclick="loadByCategory(\`${cat}\`);setCategoryActive(this)"
         class="categoryBtn px-4 py-2 bg-gray-200 rounded hover:bg-blue-600 hover:text-white">
          ${formattedName}
       </button>
@@ -154,8 +154,11 @@ async function loadCategories() {
   loader.classList.add("hidden");
 }
 
-// ================= ACTIVE CATEGORY =================
+//ACTIVE CATEGORY
+
+
 function setCategoryActive(clickedBtn) {
+
   document.querySelectorAll(".categoryBtn").forEach((btn) => {
     btn.classList.remove("bg-blue-700", "text-white");
     btn.classList.add("bg-gray-200");
@@ -165,7 +168,8 @@ function setCategoryActive(clickedBtn) {
   clickedBtn.classList.add("bg-blue-700", "text-white");
 }
 
-// ================= FILTER CATEGORY =================
+// FILTER CATEGORY
+
 async function loadByCategory(category) {
   const res = await fetch(
     `https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`,
@@ -175,7 +179,8 @@ async function loadByCategory(category) {
   
 }
 
-// ================= SINGLE PRODUCT =================
+// SINGLE PRODUCT
+
 async function loadSingleProduct(id) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
   const product = await res.json();
@@ -209,5 +214,6 @@ function goBackToProducts() {
   productsSection.classList.remove("hidden");
 }
 
-// ================= DEFAULT ACTIVE =================
+
+
 setActiveNav(homeBtn);
