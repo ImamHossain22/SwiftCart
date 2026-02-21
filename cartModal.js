@@ -42,18 +42,7 @@ const removeFromCart = (index) => {
 
   updateCartCount();
 
-  openCart(); // refresh cart view
+  openCart();
 };
 
-const loadProducts = async () => {
-    const loader = document.getElementById("loader");
-    loader.classList.remove("hidden");
 
-    const res = await fetch("https://fakestoreapi.com/products");
-    const data = await res.json();
-
-    loader.classList.add("hidden");
-
-    displayProducts(data);
-};
-  
