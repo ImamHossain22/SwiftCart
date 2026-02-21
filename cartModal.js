@@ -1,3 +1,5 @@
+
+
 const openCart = () => {
   const cartItems = document.getElementById("cartItems");
   const cartTotal = document.getElementById("cartTotal");
@@ -20,7 +22,7 @@ const openCart = () => {
         </div>
 
         <button onclick="removeFromCart(${index})"
-                class="btn btn-sm btn-error">
+                class="btn btn-soft btn-sm btn-error">
           Remove
         </button>
 

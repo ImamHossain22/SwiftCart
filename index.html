@@ -24,8 +24,8 @@
 
 <body>
     <header>
-        <nav class="w-9/12 mx-auto">
-            <div class="navbar bg-base-100">
+        <nav class=" md:w-9/12 mx-auto">
+            <div class="navbar bg-base-100  ">
                 <div class="navbar-start">
 
                     <a class="btn btn-ghost text-xl text-blue-700">SwiftCart</a>
@@ -46,13 +46,24 @@
                 </div>
                 <div class="navbar-end">
 
+
+
                     <div class="hover:bg-sky-200">
-                        <a onclick="openCart()" class="btn btn-ghost hover:text-blue-700 relative"><i
-                                class="fa-solid fa-cart-shopping"></i></a>
-                        <span id="cartCount" class="badge badge-sm badge-primary absolute -top-1 -right-1">
-                            0
-                        </span>
+
+                        
+                       
+
+                        <button onclick="openCart()" class="btn btn-ghost relative">
+                            <i class=" text-xl fa-solid fa-cart-shopping"></i>
+                            <span id="cartCount" class="badge badge-sm badge-primary absolute -top-2 -right-2">
+                                0
+                            </span>
+                        </button>
+
+
                     </div>
+
+
 
                     <div class="dropdown dropdown-end lg:hidden">
 
